@@ -396,7 +396,7 @@
       const origin = areas[area];
 
       const matches = restaurants
-        .map(r => ({...r, distance: distanceKm(origin, [r.lat, r.lon])}))
+        .map(r => ({...r, distance: distanceKm(origin, [r.lon, r.lat])}))
         .filter(r => r.distance <= radius)
         .filter(r => cuisine === "all" || r.cuisine === cuisine)
         .filter(r => r.rating >= rating)
